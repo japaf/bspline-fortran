@@ -9,7 +9,6 @@
 
     module bspline_module
 
-    use bspline_oo_module
     use bspline_sub_module
 
     implicit none
