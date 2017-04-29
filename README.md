@@ -4,11 +4,22 @@ bspline-fortran
 Multidimensional B-Spline Interpolation of Data on a Regular Grid created by Jacob Williams. Look [here](https://github.com/jacobwilliams/bspline-fortran) for original and description. This fork provides CMake installation of subroutines (no object-oriented interface). Useful when you have old compiler (Gfortran < 4.9).
 
 # Installation
-This will install the library into `${HOME}/lib` and `${HOME}/include`
+
+The library is installed in user-space (`${HOME}/lib/bspline`) and (`${HOME}/include/bspline`) by default.
+
 ```
-cmake .
-make
-make install
+mkdir build; cd build
+cmake ..
+cmake --build .
+cmake --build . --target install
+```
+
+Verify that the library and include files can be found:
+
+```
+usr@cmptr $ export PKG_CONFIG_PATH=${HOME}/lib/pkgconfig
+usr@cmptr $ pkg-config --cflags --libs libbspline
+-I/home/advsim/include/bspline -L/home/advsim/lib/bspline -lbspline
 ```
 
 # License
