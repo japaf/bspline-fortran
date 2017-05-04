@@ -17,8 +17,11 @@ cmake --build . --target install
 Verify that the library and include files can be found:
 
 ```
-usr@cmptr $ export PKG_CONFIG_PATH=${HOME}/lib/pkgconfig
-usr@cmptr $ pkg-config --cflags --libs libbspline
+export PKG_CONFIG_PATH=${HOME}/lib/pkgconfig
+pkg-config --cflags --libs libbspline
+```
+Expect output similar to:
+```
 -I/home/advsim/include/bspline -L/home/advsim/lib/bspline -lbspline
 ```
 
