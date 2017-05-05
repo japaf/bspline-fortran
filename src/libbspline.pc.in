@@ -4,7 +4,7 @@ libdir=${exec_prefix}/lib/bspline
 includedir=${prefix}/include/bspline
 
 Name: @CMAKE_PROJECT_NAME@
-Description: MoDeNa software framework for multi-scale simulations
+Description: Fortran Library for Multidimensional B-Spline Interpolation of Data on a Regular Grid
 URL: https://github.com/japaf/bspline
 Version: @PACKAGE_VERSION@
 Libs: -L${libdir} -lbspline
