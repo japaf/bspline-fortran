@@ -14,17 +14,6 @@ cmake --build .
 cmake --build . --target install
 ```
 
-Verify that the library and include files can be found:
-
-```
-export PKG_CONFIG_PATH=${HOME}/lib/pkgconfig
-pkg-config --cflags --libs libbspline
-```
-Expect output similar to:
-```
--I/home/advsim/include/bspline -L/home/advsim/lib/bspline -lbspline
-```
-
 # License
 
 The bspline-fortran source code and related files and documentation are distributed under a permissive free software [license](https://github.com/jacobwilliams/bspline-fortran/blob/master/LICENSE) (BSD-style).

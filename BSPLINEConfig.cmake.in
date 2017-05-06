@@ -1,0 +1,17 @@
+# It defines the following variables
+#  PROJECT_INCLUDE_DIRS - include directories for the project
+#  PROJECT_LIBRARIES    - libraries to link against
+#  PROJECT_EXECUTABLE   - the executables
+
+# Compute paths
+get_filename_component(BSPLINE_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+set(BSPLINE_INCLUDE_DIRS "@CONF_INCLUDE_DIRS@")
+ 
+# Our library dependencies (contains definitions for IMPORTED targets)
+if(NOT TARGET bspline AND NOT BSPLINE_BINARY_DIR)
+  include("${BSPLINE_CMAKE_DIR}/BSPLINETargets.cmake")
+endif()
+ 
+# These are IMPORTED targets created by BSPLINETargets.cmake
+set(BSPLINE_LIBRARIES bspline)
+# set(BSPLINE_EXECUTABLE bar) # no executables in this project
