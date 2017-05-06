@@ -14,7 +14,7 @@ project (bspline VERSION 1.0 LANGUAGES Fortran)
 
 set(CMAKE_INSTALL_PREFIX $ENV{HOME})# Install in user-space
 
-et(
+set(
   INSTALL_LIB_DIR lib/${PROJECT_NAME}
   CACHE PATH "Library install directories"
 )
@@ -97,6 +97,6 @@ install(
 
 # Install the export set for use with the install-tree
 install(
-  EXPORT BSPLINETargets DESTINATION
-  "${INSTALL_CMAKE_DIR}"
+  EXPORT BSPLINETargets
+  DESTINATION "${INSTALL_CMAKE_DIR}"
 )
