@@ -1,0 +1,10 @@
+libdir=@INSTALL_LIB_DIR@
+includedir=@INSTALL_INCLUDE_DIR@
+name=@PROJECT_NAME@
+
+Name: @CMAKE_PROJECT_NAME@
+Description: Fortran Library for Multidimensional B-Spline Interpolation of Data on a Regular Grid
+URL: https://github.com/japaf/bspline
+Version: @PACKAGE_VERSION@
+Libs: -L${libdir} -l${name}
+Cflags: -I${includedir}
