@@ -9,9 +9,9 @@ The library is installed in user-space (`${HOME}/lib/bspline`) and (`${HOME}/inc
 
 ```
 mkdir build; cd build
-cmake ..
-cmake --build .
-cmake --build . --target install
+cmake .. -DCMAKE_INSTALL_PREFIX=$HOME
+make
+make install
 ```
 
 Verify that the library and include files can be found:

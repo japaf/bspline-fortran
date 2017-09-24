@@ -12,8 +12,6 @@ project (bspline VERSION 1.0 LANGUAGES Fortran)
 # --> Allow user to override the installation directories
 # --------------------------------------------------------------------------- #
 
-set(CMAKE_INSTALL_PREFIX $ENV{HOME})# Install in user-space
-
 set(
   INSTALL_LIB_DIR lib/${PROJECT_NAME}
   CACHE PATH "Library install directories"
@@ -29,7 +27,7 @@ set(
 if(WIN32 AND NOT CYGWIN)
   set(DEF_INSTALL_CMAKE_DIR CMake)
 else()
-  set(DEF_INSTALL_CMAKE_DIR lib/cmake/bspline)
+  set(DEF_INSTALL_CMAKE_DIR lib/cmake/${PROJECT_NAME})
 endif()
 set(
   INSTALL_CMAKE_DIR ${DEF_INSTALL_CMAKE_DIR} CACHE PATH
